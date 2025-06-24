@@ -1,5 +1,6 @@
 #include <iostream>
 
+#define MAX 3
 using namespace std;
 class Quadrado
 {
@@ -75,8 +76,18 @@ int main()
 {
 	Quadrado Quadrado1;
 	Quadrado1.Lerlado();
-	cout << "O perimetro do quadrado e: " << Quadrado1.calcularPerimetro() << endl;
+	cout << "O perimetro do quadrado e:" << Quadrado1.calcularPerimetro() << endl;
 	cout << "A area do quadrado e: " << Quadrado1.calcularArea() << endl;
 	Quadrado1.escreveLado();
+
+
+	Quadrado ArraysQuadrados[MAX];
+	for(int i = 0; i < MAX; i++)
+	{
+		ArraysQuadrados[i].Lerlado();
+		cout << "O perimetro do quadrado e:" << ArraysQuadrados[i].calcularPerimetro() << endl;
+		cout << "A area do quadrado e: " << ArraysQuadrados[i].calcularArea() << endl;
+
+	}
 	return 0;
 }
